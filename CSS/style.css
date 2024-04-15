@@ -4,10 +4,92 @@
     place-content: center;
 }
 
-.center{
-    background-color: darkgray;
+.enter-name{
     margin-top: 10%;
-    width: 1050px;
-    height: 1890px;
-    outline: 5px gray;
+}
+
+.enter-name input[type="text"]{
+    height: 40px;
+    width: 300px;
+}
+
+.enter-birthday{
+    margin-top: 5%;
+}
+
+.enter-birthday input[type="number"]{
+    height: 40px;
+}
+
+.enter-birthday input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0px;
+}
+
+.complete-btn{
+    margin-top: 5%;
+}
+
+.complete-btn input[type="button"]
+{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: white;
+}
+
+.complete-btn input[type="button"]:hover {
+    background-color: lightgray;
+}
+
+.checkboxes{
+    background-color: lightgray;
+    margin-top: 0.5%;
+    width: 850px;
+    height: 1895px;
+}
+
+.checkboxes input[type="checkbox"] {
+    display: inline-block;
+    margin: 0.005%;
+    width: 16px;
+    height: 16px;
+}
+
+.outer-weeks{
+    position: relative;
+    margin-top: 1.5%;
+}
+
+.weeks{
+    position: center;
+}
+
+.weeks input[type="checkbox"] {
+    margin: 0.23%;
+    visibility: hidden
+}
+
+.outer-life{
+    position: relative;
+}
+
+.outer-years{
+    margin-top: 0.8%;
+    margin-right: 100px;
+    position: absolute;
+    left: -20px;
+}
+
+.years{
+    height: 1895px;
+    width: 20px;
+    margin-right: 10%;
+    position: absolute;
+}
+
+.years input[type="checkbox"]
+{
+    visibility: hidden;
 }
