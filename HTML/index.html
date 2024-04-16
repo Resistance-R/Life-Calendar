@@ -8,20 +8,36 @@
 </head>
 <body>
     <div class="container">
-        <h1>Life Calender</h1>
-        <h2>A 90-Year Human Life in Weeks.</h2>
-        
-        <div class="outer-weeks">
-            <div class="weeks" id="week-grid"></div>
+
+        <div id = date-info>            
+            <h1 id="greet"></h1>
+            <br>
+            <h2 id="now-date"></h2>
+            <h3 id="now-day"></h3>
+            <br>
         </div>
-        
-        <div class="outer-life">
-            <div class="outer-years">
-                <div class="years" id="year-grid"></div>
-            </div>
-            <div class="checkboxes" id="checkbox-grid"></div>
+
+        <div id="d-days">
+            <h4 id="left-days-text"></h4>
+            <div id="left-days"></div>
+            <h1 id="celebration"style="font-size: 30px;"></h1>
+        </div>
+    
+            <div class="calender">
+                <div class="outer-weeks">
+                    <div class="weeks" id="week-grid"></div>
+                    
+                    <div class="outer-life">
+                        <div class="outer-years">
+                            <div class="years" id="year-grid"></div>
+                        </div>
+                        <label for="checkbox-grid">
+                            <div class="checkboxes" id="checkbox-grid"></div>
+                        </label>
+                    </div>
+                </div>
         </div>
     </div>
-    <script src="../JS/check_box.js"></script>
+    <script src="../JS/main.js"></script>
 </body>
 </html>
