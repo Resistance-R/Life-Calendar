@@ -49,6 +49,14 @@
     background-color: lightgray;
 }
 
+.left-days{
+    line-height: 5%;
+}
+
+.next-week{
+    line-height: 3%;
+}
+
 .checkboxes input[type="checkbox"] {
     display: none;
 }
@@ -126,4 +134,48 @@
 {
     height: 5px;
     visibility: hidden;
+}
+
+.next-birthday{
+    line-height: 3%;
+}
+
+.quotes{
+    margin-left: 3%;
+    text-align: center;
+    width: 400px;
+    height: auto;
+}
+
+.settings{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.main-enter-name input{
+    height: 40px;
+    width: 150px;
+}
+
+.main-enter-birthday{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-enter-birthday input{
+    margin: 0 auto;
+    margin-top: 1%;
+    display: inline-block;
+    height: 40px;
+    width: 100px;
+}
+
+.main-enter-birthday input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0px;
+}
+
+.next-week{
+    margin-top: 10%;
 }

@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     DayInfo();
 
-    document.getElementById("left-days-text").innerHTML = `만약 90세까지 산다고 가정할 때, <br/>${userName}께서는`
+    document.getElementById("left-days-text").innerHTML = `만약 90세까지 산다고 가정할 때, <br/>${userName}님께서는`
+
     Dday();
 });
 
@@ -22,18 +23,51 @@ function Dday() {
     var currentDate = new Date();
     var timeDiff = Math.abs(currentDate.getTime() - userBirthday.getTime());
 
+    var daysAlive = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    var forNextWeek = 7 - (daysAlive % 7);
+    var leftDays = (4680 * 7) - daysAlive
+
     var weeksAlive = Math.ceil(timeDiff / (1000 * 3600 * 24 * 7));
     var leftWeeks = 4680 - weeksAlive;
 
+    var currentYearBirthday = new Date(currentDate.getFullYear(), userBirthday.getMonth(), userBirthday.getDate());
+    var nextBirthdayDiff = new Date(currentDate.getFullYear() + 1, userBirthday.getMonth(), userBirthday.getDate()) - currentDate;
+    
     if (leftWeeks * 7 > 0) {
-        document.getElementById("left-days").innerHTML = `<h1>${leftWeeks}주</h1><h2>즉, ${leftWeeks * 7}일 남았습니다.</h2>`
+        document.getElementById("left-days").innerHTML = `<h1>${leftWeeks}주</h1><br><h2>즉, ${leftDays}일 남았습니다.</h2>`
     }
-
+    
     else if (leftWeeks * 7 <= 0) {
-        document.getElementById("left-days").innerHTML = `사망보다 ${-leftWeeks}주 <br/>즉, ${-leftWeeks * 7}일 더 살았습니다.`
+        document.getElementById("left-days").innerHTML = `<h1>사망보다 ${-leftWeeks}주</h1><br><h2>즉, ${-leftDays}일 더 살았습니다.</h2>`
         document.getElementById("celebration").innerText = "축하합니다!"
     }
+    
+    if (currentDate > currentYearBirthday)
+    {
+        var nextYearBirthday = new Date(currentDate.getFullYear() + 1, userBirthday.getMonth(), userBirthday.getDate());
+        
+        var nextBirthdayDiff = nextYearBirthday - currentDate;
+    }
+    
+    else
+    {
+        var nextBirthdayDiff = currentYearBirthday - currentDate;
+    }
 
+    var daysUntilNextBirthday = Math.ceil(nextBirthdayDiff / (1000 * 60 * 60 * 24));
+
+    if(daysUntilNextBirthday == 365)
+    {
+        document.getElementById("next-birthday").innerHTML = "</br><h3>오늘이 생일이네요.</h3><br><h1>생일 축하합니다!</h1>"    
+    }
+    
+    else
+    {
+        document.getElementById("next-birthday").innerHTML = `</br><h3>생일까지 남은 일수:</h3><br><h1>${daysUntilNextBirthday}일</h1>`
+    }
+
+    document.getElementById("next-week").innerHTML = `<h3>다음 일주일까지:</h3><br><h1>${forNextWeek}일</h1>`
+    
     SetCheckboxes();
 }
 
@@ -99,31 +133,6 @@ function SetCheckboxes()
         var lineBreak = document.createElement("br");
         yearGrid.appendChild(lineBreak);
     }
-    
-    // for(var i = 0; i < 90; i++)
-    // {
-    //     for(var j = 0; j < 52; j++)
-    //     {
-    //         if(weeksAlive >= checkboxLimit)
-    //         {
-    //             var checkbox = document.createElement("input");
-    //             checkbox.type = "checkbox";
-    //             checkboxGrid.appendChild(checkbox);
-    //             checkbox.checked = true; 
-    //             checkboxLimit++
-    //         }
-
-    //         else
-    //         {
-    //             var checkbox = document.createElement("input");
-    //             checkbox.type = "checkbox";
-    //             checkboxGrid.appendChild(checkbox);
-    //         }
-            
-    //     }
-    //     var lineBreak = document.createElement("br");
-    //     checkboxGrid.appendChild(lineBreak);
-    // }
 
     for (var i = 0; i < 90; i++)
     {

@@ -17,27 +17,65 @@
             <br>
         </div>
 
-        <div id="d-days">
-            <h4 id="left-days-text"></h4>
-            <div id="left-days"></div>
+        <div class="d-days" id="d-days">
+            <div id="left-days-text"></div>
+            <div class="left-days" id="left-days"></div>
             <h1 id="celebration"style="font-size: 30px;"></h1>
+            <div class="next-birthday" id="next-birthday"></div>
+            <div class="next-week" id="next-week"></div>
         </div>
-    
-            <div class="calender">
-                <div class="outer-weeks">
-                    <div class="weeks" id="week-grid"></div>
-                    
-                    <div class="outer-life">
-                        <div class="outer-years">
-                            <div class="years" id="year-grid"></div>
-                        </div>
-                        <label for="checkbox-grid">
-                            <div class="checkboxes" id="checkbox-grid"></div>
-                        </label>
+
+        <div class="quotes" id="quotes">
+            <h3></h3>
+            <span></span>
+        </div>
+
+        <div class="calender">
+            <div class="outer-weeks">
+                <div class="weeks" id="week-grid"></div>
+                
+                <div class="outer-life">
+                    <div class="outer-years">
+                        <div class="years" id="year-grid"></div>
                     </div>
+                    <label for="checkbox-grid">
+                        <div class="checkboxes" id="checkbox-grid"></div>
+                    </label>
                 </div>
+            </div>
+        </div>
+
+        <div class="todo" id="todo">
+            <!--할 일 목록-->
+        </div>
+
+        <div class="diary" id="diary">
+            <!--감정 일기-->
+        </div>
+
+        <div class="settings">
+            <div>
+                <div>
+                    <h2>정보 변경</h2>
+                </div>
+
+            <div class="main-enter-name">
+                <input type="text" placeholder="이름을 입력하세요." id="name" />
+                </div>
+                <div class="main-enter-birthday">
+                    <input type="number" placeholder="MM" id="MM" />
+                    <input type="number" placeholder="DD" id="DD" />
+                    <input type="number" placeholder="YYYY" id="YYYY" />
+                </div>
+                <div class="complete-btn" id="complete-btn">
+                    <input type="button" value="Complete!" onclick="start()" />
+                </div>
+            </div>
         </div>
     </div>
+    
     <script src="../JS/main.js"></script>
+    <script src="../JS/quotes.js"></script>
+    <script src="../JS/enter_birthday.js"></script>
 </body>
 </html>
