@@ -11,11 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
             location.replace("../HTML/index.html");
         }
 
-        else
-        {
-            location.replace("../HTML/entrance.html");
-        }
-
         function FadeInOut() {
             let observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
@@ -30,10 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             let firstPage = document.getElementById("first-page");
+
             observer.observe(firstPage)
         }
     }
-
 })
 function start()
 {

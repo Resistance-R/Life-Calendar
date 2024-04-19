@@ -1,8 +1,36 @@
+.entire{
+    overflow-x: hidden;
+    perspective: 150%;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(-2px);
+    opacity: 0.5;
+    background-position: center;
+}
+
+#background img{
+    width: 1500px;
+    height: 1000px;
+}
+
 .container{
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     display: grid;
     place-content: center;
+}
+
+#origin{
+    transform: translateZ(-1px);
 }
 
 .first-page{
@@ -22,6 +50,7 @@
 }
 
 .enter-name{
+    opacity: 0.8;
     margin-top: 10%;
 }
 
@@ -31,6 +60,7 @@
 }
 
 .enter-birthday{
+    opacity: 0.8;
     margin-top: 5%;
 }
 
@@ -44,6 +74,7 @@
 }
 
 .complete-btn{  
+    opacity: 0.8;
     margin-top: 5%;
 }
 
@@ -199,6 +230,10 @@
     height: 30px;
 }
 
+.enter-todo{
+    opacity: 0.8;
+}
+
 .enter-todo-window{
     opacity: 0;
     transition: all 1.5s;
@@ -225,6 +260,7 @@
 }
 
 .past-todo{
+    opacity: 0.8;
     border-radius: 3px;
     width: auto;
     height: 200px;
@@ -322,6 +358,7 @@
 }
 
 .diary{
+    opacity: 0.8;
     margin-top: 5%;
     width: auto;
     height: 100px;
@@ -343,6 +380,7 @@
 }
 
 .diary-input{
+    opacity: 0.8;
     margin-top: 2%;
     width: 90%;
     height: auto;
@@ -352,17 +390,20 @@
 }
 
 .diary-assign{
+    opacity: 0.8;
     margin-top: 3%;
     width: 100px;
     height: 40px;
 }
 
 .main-enter-name input{
+    opacity: 0.8;
     height: 40px;
     width: 150px;
 }
 
 .main-enter-birthday{
+    opacity: 0.8;
     display: flex;
     flex-direction: column;
     justify-content: center;
