@@ -53,6 +53,11 @@ const quotes = [
         quote: "우리가 선을 행하되 낙심하지 말지니 포기하지 아니하면 때가 이르매 거두리라",
         source: "< 갈라디아서 6:9 >",
     },
+
+    {
+        quote: "의에 주리고 목마른 자는 복이 있나니 그들이 배부를 것임이요",
+        source: "< 마태복음 5:6 >",
+    }
 ]
 
 const quote = document.querySelector("#quotes h3");

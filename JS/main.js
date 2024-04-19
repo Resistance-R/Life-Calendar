@@ -24,7 +24,7 @@ function Dday() {
     var timeDiff = Math.abs(currentDate.getTime() - userBirthday.getTime());
 
     var daysAlive = Math.ceil(timeDiff / (1000 * 3600 * 24));
-    var forNextWeek = 7 - (daysAlive % 7);
+    var forNextWeek = -((daysAlive % 7) - 7);
     var leftDays = (4680 * 7) - daysAlive
 
     var weeksAlive = Math.ceil(timeDiff / (1000 * 3600 * 24 * 7));
@@ -34,11 +34,11 @@ function Dday() {
     var nextBirthdayDiff = new Date(currentDate.getFullYear() + 1, userBirthday.getMonth(), userBirthday.getDate()) - currentDate;
     
     if (leftWeeks * 7 > 0) {
-        document.getElementById("left-days").innerHTML = `<h1>${leftWeeks}주</h1><br><h2>즉, ${leftDays}일 남았습니다.</h2>`
+        document.getElementById("left-days").innerHTML = `<h2>${leftDays}일</h2><br><h1>즉, ${leftWeeks}주 남았습니다.</h1><br>`
     }
     
     else if (leftWeeks * 7 <= 0) {
-        document.getElementById("left-days").innerHTML = `<h1>사망보다 ${-leftWeeks}주</h1><br><h2>즉, ${-leftDays}일 더 살았습니다.</h2>`
+        document.getElementById("left-days").innerHTML = `<h2>사망보다  ${-leftDays}일 </h2><br><h1>즉,${-leftWeeks} 주더 살았습니다.</h1>`
         document.getElementById("celebration").innerText = "축하합니다!"
     }
     
@@ -197,7 +197,7 @@ function DayInfo()
             document.getElementById("now-day").innerText = "수요일! 절반 왔어요!"
             break;
         case 4:
-            document.getElementById("now-day").innerText = "목요일 입니다. 조그만 더 힘 내세요!"
+            document.getElementById("now-day").innerText = "목요일 입니다. 조금만 더 힘 내세요!"
             break;
         case 5:
             document.getElementById("now-day").innerText = "드디어 금요일! 주말동안 무엇을 하실건가요?"

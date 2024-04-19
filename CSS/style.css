@@ -5,7 +5,18 @@
     place-content: center;
 }
 
+.first-page{
+    opacity: 0;
+    transition: all 3s;
+}
+
+.upper-texts{
+    line-height: 180%;
+}
+
 .calender{
+    opacity: 0;
+    transition: all 1.5s;
     display: inline-block;
     margin-right: 35px;
 }
@@ -32,7 +43,7 @@
     margin: 0px;
 }
 
-.complete-btn{
+.complete-btn{  
     margin-top: 5%;
 }
 
@@ -49,11 +60,23 @@
     background-color: lightgray;
 }
 
+.date-info{
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+.days-text{
+    opacity: 0;
+    transition: all 1.5s;
+}
+
 .left-days{
     line-height: 5%;
 }
 
 .next-week{
+    opacity: 0;
+    transition: all 1.5s;
     line-height: 3%;
 }
 
@@ -137,10 +160,24 @@
 }
 
 .next-birthday{
+    opacity: 0;
+    transition: all 1.5s;
     line-height: 3%;
 }
 
+.quotation-mark{
+    font-size: 50px;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+
 .quotes{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border: 2px solid black;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 1.5s;
     margin-left: 3%;
     text-align: center;
     width: 400px;
@@ -148,8 +185,176 @@
 }
 
 .settings{
+    opacity: 0;
+    transition: all 1.5s;
     margin-top: 5%;
     text-align: center;
+}
+
+.plus-btn{
+    margin-top: 3%;
+    opacity: 0;
+    transition: all 1.5s;
+    width: 150px;
+    height: 30px;
+}
+
+.enter-todo-window{
+    opacity: 0;
+    transition: all 1.5s;
+    display: none;
+}
+
+.enter-todo-window input{
+    width: auto;
+    height: 40px;
+}
+
+.enter-todo-text{
+    width: 200px;
+}
+
+.outer-todos{
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+.dead-line-info{
+    margin-top: 5%;
+    text-align: left;
+}
+
+.past-todo{
+    border-radius: 3px;
+    width: auto;
+    height: 200px;
+    border: 1px solid white;
+    background-color: rgb(65, 65, 65);
+    overflow: scroll;
+}
+
+.past-todo li {
+    color: white;
+    list-style-type: none;
+}
+
+.past-todo li::before {
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+    content: '[X]';
+    display: block;
+    color: red;
+    float: left;
+}
+
+.past-todo span {
+    color: white;
+    position: flex;
+    float: left;
+}
+
+.now-todo{
+    border-radius: 3px;
+    width: auto;
+    height: 200px;
+    border: 1px solid black;
+    overflow: scroll;
+}
+
+.div-now-todo{
+    margin-top: 3%;
+    text-align: left;
+    align-items: flex-start;
+    height: 50px;
+}
+
+.date-div{
+    height: 20px;
+}
+
+.now-todo li{
+    list-style-type: none;
+}
+
+.now-todo li::before{
+    position: flex;
+    margin-left: 10%;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+    content: '[X]';
+    display: block;
+    color: red;
+    float: left;
+}
+
+.now-todo span{
+    position: flex;
+    float: left;
+}
+
+.time-limit-text{
+    margin: 0;
+    line-height: 0;
+}
+
+.todo-date input{
+    width: 50px;
+    margin-top: 3%;
+}
+
+.todo-date input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0px;
+}
+
+.assign-btn{
+    width: 200px !important;
+}
+
+.outer-diary{
+    opacity: 0;
+    transition: all 1.5s;
+    position: relative;
+}
+
+.diary{
+    margin-top: 5%;
+    width: auto;
+    height: 100px;
+    border-radius: 3px;
+    border: 1px solid rgb(226, 226, 0);
+    background-color: rgb(255, 255, 208);
+    overflow: scroll;
+}
+
+.diary div{
+    margin-top: 2%;
+    margin-left: 3%;
+    text-align: left;
+}
+
+.bunch-of-diary-input{
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+.diary-input{
+    margin-top: 2%;
+    width: 90%;
+    height: auto;
+    font-size: 15px;
+    white-space: pre-wrap;
+    overflow: scroll;
+}
+
+.diary-assign{
+    margin-top: 3%;
+    width: 100px;
+    height: 40px;
 }
 
 .main-enter-name input{

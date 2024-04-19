@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     if (document.title === "Life Calender - Start Page")
     {   
+        FadeInOut();
+
         var storedUserName = localStorage.getItem("user_name");
         var storedUserBirthday = localStorage.getItem("user_birthday");
         
@@ -12,6 +14,23 @@ document.addEventListener("DOMContentLoaded", function () {
         else
         {
             location.replace("../HTML/entrance.html");
+        }
+
+        function FadeInOut() {
+            let observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                    }
+
+                    else {
+                        entry.target.style.opacity = 0;
+                    }
+                });
+            });
+
+            let firstPage = document.getElementById("first-page");
+            observer.observe(firstPage)
         }
     }
 
@@ -25,7 +44,7 @@ function start()
 
     if((userMM <= 0 || userMM > 12) || (userDD <= 0 || userDD > 31))
     {
-        alert("유요한 날짜를 입력하십시오.")
+        alert("유효한 날짜를 입력하십시오.");
         return;
     }
 
