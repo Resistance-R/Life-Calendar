@@ -80,6 +80,7 @@
 
 .complete-btn input[type="button"]
 {
+    opacity: 0.8;
     height: 40px;
     width: 100px;
     border-radius: 5px;
@@ -88,6 +89,7 @@
 }
 
 .complete-btn input[type="button"]:hover {
+    opacity: 0.8;
     background-color: lightgray;
 }
 

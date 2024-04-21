@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/menu.css" type="text/css">
     <title>Life Calender</title>
 </head>
 <body>
@@ -12,30 +13,33 @@
     
         <div class="container" id="origin">
     
-            <div class="upper-texts">
-                <div class="date-info" id = date-info>            
-                    <h1 id="greet"></h1>
-                    <br>
-                    <h2 id="now-date"></h2>
-                    <h3 id="now-day"></h3>
-                    <br>
-                </div>
-        
-                <div class="d-days" id="d-days">
-                    <div class="days-text" id="days-text">
-                        <div id="left-days-text"></div>
-                        <div class="left-days" id="left-days"></div>
+            <div id="intro-text">
+
+                <div class="upper-texts">
+                    <div class="date-info" id = date-info>            
+                        <h1 id="greet"></h1>
+                        <br>
+                        <h2 id="now-date"></h2>
+                        <h3 id="now-day"></h3>
+                        <br>
                     </div>
-                    <h1 id="celebration"style="font-size: 30px;"></h1>
-                    <div class="next-birthday" id="next-birthday"></div>
-                    <div class="next-week" id="next-week"></div>
-                </div>
-        
-                <div class="quotes" id="quotes">
-                    <h1 class="quotation-mark">"</h1>
-                    <h3></h3>
-                    <span></span>
-                    <h1 class="quotation-mark">"</h1>
+            
+                    <div class="d-days" id="d-days">
+                        <div class="days-text" id="days-text">
+                            <div id="left-days-text"></div>
+                            <div class="left-days" id="left-days"></div>
+                        </div>
+                        <h1 id="celebration"style="font-size: 30px;"></h1>
+                        <div class="next-birthday" id="next-birthday"></div>
+                        <div class="next-week" id="next-week"></div>
+                    </div>
+            
+                    <div class="quotes" id="quotes">
+                        <h1 class="quotation-mark">"</h1>
+                        <h3></h3>
+                        <span></span>
+                        <h1 class="quotation-mark">"</h1>
+                    </div>
                 </div>
             </div>
     
@@ -104,7 +108,6 @@
                 </div>
             </div>
     
-    
             <div class="settings" id="settings">
                 <div>
                     <div>
@@ -125,6 +128,30 @@
                 </div>
             </div>
         </div>
+        
+        <div class="outer-menu">
+            <div class="menu-container">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <menu class="navbar">
+                    <button class="transparent-button" id="transparent-button"> </button>
+                    <ul>
+                        <li id="refresh"><a href="#"><b>새로고침</b></a></li>
+                        <li id="intro"><a href="#"><b>도입</b></a></li>
+                        <li id="life-calender"><a href="#"><b>인생 달력</b></a></li>
+                        <li id="plan"><a href="#"><b>계획</b></a></li>
+                        <li id="summary"><a href="#"><b>하루 요약</b></a></li>
+                        <li id="change-info"><a href="#"><b>정보 변경</b></a></li>
+                        <li id="reset"><a href="#"><b>앱 리셋</b></a></li>
+                    </ul>
+                </menu>
+
+            </div>
+        </div>
     </div>
     
     <script src="../JS/anim.js"></script>
@@ -135,5 +162,6 @@
     <script src="../JS/diary.js"></script>
     <script src="../JS/background.js"></script>
     <script src="../JS/back.js"></script>
+    <script src="../JS/menu.js"></script>
 </body>
 </html>
