@@ -3,6 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var storedUserBirthday = localStorage.getItem("user_birthday");
 
     if (storedUserName == null || storedUserBirthday == null) {
-        location.replace("../HTML/index.html");
+        location.replace("./index.html");
     }
 });

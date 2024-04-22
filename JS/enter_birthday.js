@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         if(storedUserName != null && storedUserBirthday != null)
         {
-            location.replace("../HTML/main.html");
+            location.replace("./main.html");
         }
 
         function FadeInOut() {
@@ -47,7 +47,7 @@ function start()
     {
         localStorage.setItem("user_name", userName);
         localStorage.setItem("user_birthday", userMM + "/" + userDD + "/" + userYYYY);
-        location.replace("../HTML/main.html");
+        location.replace("./main.html");
     }
 
     else

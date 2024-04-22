@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="./CSS/menu.css" type="text/css">
+    <title>Life Calender</title>
+</head>
+<body>
+    <div class="entire">    
+        <div class="container" id="background"></div>
+    
+        <div class="container" id="origin">
+    
+            <div id="intro-text">
+
+                <div class="upper-texts">
+                    <div class="date-info" id = date-info>            
+                        <h1 id="greet"></h1>
+                        <br>
+                        <h2 id="now-date"></h2>
+                        <h3 id="now-day"></h3>
+                        <br>
+                    </div>
+            
+                    <div class="d-days" id="d-days">
+                        <div class="days-text" id="days-text">
+                            <div id="left-days-text"></div>
+                            <div class="left-days" id="left-days"></div>
+                        </div>
+                        <h1 id="celebration"style="font-size: 30px;"></h1>
+                        <div class="next-birthday" id="next-birthday"></div>
+                        <div class="next-week" id="next-week"></div>
+                    </div>
+            
+                    <div class="quotes" id="quotes">
+                        <h1 class="quotation-mark">"</h1>
+                        <h3></h3>
+                        <span></span>
+                        <h1 class="quotation-mark">"</h1>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="calender" id="calender">
+                <div class="outer-weeks">
+                    <div class="weeks" id="week-grid"></div>
+                    
+                    <div class="outer-life">
+                        <div class="outer-years">
+                            <div class="years" id="year-grid"></div>
+                        </div>
+                        <label for="checkbox-grid">
+                            <div class="checkboxes" id="checkbox-grid"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="todo" id="todo">
+    
+                <div class="outer-todos" id="outer-past-todo">
+                    <h2 class="dead-line-info">기한 만료:</h2>
+        
+                    <div class="past-todo" id="past-todo"></div>
+                </div>
+    
+                <div class="outer-todos" id="outer-now-todo">
+                    <h2 class="dead-line-info">계획:</h2>
+        
+                    <div id="todos">
+                        <div class="now-todo" id="now-todo"></div>
+                    </div>
+                </div>
+    
+                <div class="enter-todo">
+                    <div>
+                        <input type="button" value="+" class="plus-btn" id="plus-btn" onclick="ToggleBtns()">
+                    </div>
+                    <br>
+                    <div class="enter-todo-window" id="enter-todo-window">
+                        <input type="text" placeholder="하고 싶은 일을 입력하세요." class="enter-todo-text" id="enter-todo-text">
+                        <br>
+                        <div class="todo-date">
+                            <div class="time-limit-text">
+                                <h4>기한 설정</h4>
+                            </div>
+    
+                            <input type="number" id="todo-MM" placeholder="MM">
+                            <input type="number" id="todo-DD" placeholder="DD">
+                            <input type="number" id="todo-YYYY" placeholder="YYYY">
+                            <br>
+                            <input type="button" value="할 일 등록" class="assign-btn" onclick="assign()" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="outer-diary" id="outer-diary">
+                <h2 class="dead-line-info">하루 요약:</h2>
+                <div class="diary" id="diary"></div>
+    
+                <div class="bunch-of-diary-input" id="bunch-of-diary-input">
+                    <input type="text" class="diary-input" id="diary-input">
+                    <br>
+                    <input type="button" value="완료" class="diary-assign" id="diary-assign" onclick="submit()">
+                </div>
+            </div>
+    
+            <div class="settings" id="settings">
+                <div>
+                    <div>
+                        <h2>정보 변경</h2>
+                    </div>
+    
+                <div class="main-enter-name">
+                    <input type="text" placeholder="이름을 입력하세요." id="name" />
+                    </div>
+                    <div class="main-enter-birthday">
+                        <input type="number" placeholder="MM" id="MM" />
+                        <input type="number" placeholder="DD" id="DD" />
+                        <input type="number" placeholder="YYYY" id="YYYY" />
+                    </div>
+                    <div class="complete-btn" id="complete-btn">
+                        <input type="button" value="Complete!" onclick="start()" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="outer-menu">
+            <div class="menu-container">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <menu class="navbar">
+                    <button class="transparent-button" id="transparent-button"> </button>
+                    <ul>
+                        <li id="refresh"><a href="#"><b>새로고침</b></a></li>
+                        <li id="intro"><a href="#"><b>도입</b></a></li>
+                        <li id="life-calender"><a href="#"><b>인생 달력</b></a></li>
+                        <li id="plan"><a href="#"><b>계획</b></a></li>
+                        <li id="summary"><a href="#"><b>하루 요약</b></a></li>
+                        <li id="change-info"><a href="#"><b>정보 변경</b></a></li>
+                        <li id="reset"><a href="#"><b>앱 리셋</b></a></li>
+                    </ul>
+                </menu>
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="./JS/anim.js"></script>
+    <script src="./JS/main.js"></script>
+    <script src="./JS/quotes.js"></script>
+    <script src="./JS/enter_birthday.js"></script>
+    <script src="./JS/todo.js"></script>
+    <script src="./JS/diary.js"></script>
+    <script src="./JS/background.js"></script>
+    <script src="./JS/back.js"></script>
+    <script src="./JS/menu.js"></script>
+</body>
+</html>
