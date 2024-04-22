@@ -1,11 +1,5 @@
-.outer-menu{
-    height: 100%;
-    width: 100%;
-    position: fixed;
-}
-
 .menu-container {
-    position: sticky;
+    position: fixed;
     margin: 0;
     padding: 0;
     transform: translateZ(0px);
@@ -28,7 +22,7 @@
 .navbar {
     opacity: 0.9;
     background-color: #333;
-    width: 25%;
+    width: 350px;
     height: 700px;
     display: none;
 }
@@ -180,7 +174,7 @@
 
     .navbar {
         background-color: #333;
-        width: 100%;
+        width: 150%;
         height: 100%;
         display: none;
     }
